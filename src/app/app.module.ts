@@ -9,6 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { TermsPage } from '../pages/terms/terms';
+import { InfoPage } from '../pages/info/info';
+import { AnadirPage } from '../pages/anadir/anadir';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { WelcomePage } from '../pages/welcome/welcome';
     HomePage,
     LoginPage,
     RegisterPage,
-    WelcomePage
+    WelcomePage,
+    TermsPage,
+    InfoPage,
+    AnadirPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import { WelcomePage } from '../pages/welcome/welcome';
     HomePage,
     LoginPage,
     RegisterPage,
-    WelcomePage
+    WelcomePage,
+    TermsPage,
+    InfoPage,
+    AnadirPage
   ],
   providers: [
     StatusBar,

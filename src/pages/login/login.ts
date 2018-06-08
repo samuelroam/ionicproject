@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { WelcomePage } from '../welcome/welcome';
+import { TermsPage } from '../terms/terms';
 
 
 
@@ -20,7 +20,7 @@ export class LoginPage {
   }
   login(){
   if(this.user.value == "admin" && this.password.value == "admin"){
-  this.navCtrl.push(WelcomePage);
+  this.navCtrl.push(TermsPage);
   }else{
   let alert = this.alertCtrl.create({
   title: 'Datos incorrectos',

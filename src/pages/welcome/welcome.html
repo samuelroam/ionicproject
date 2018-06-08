@@ -5,4 +5,20 @@
 </ion-header>
 <ion-content padding>
 <h1>¡¡Bienvenido a nuestra aplicación!!</h1>
+
+    <div ion-item *ngFor="let juego of juegos" (click)="openModal(juego)">
+
+        <ion-list>
+
+        <button ion-item>{{ juego.nombre }}</button>
+
+        </ion-list>
+    </div>
+
+ <!-- Real floating action button, fixed. It will not scroll with the content -->
+ <ion-fab bottom right>
+     <button ion-button [navPush]="pushPage">Go</button>
+ </ion-fab>
+    <!-- añadir boton para agregar a la lista, basado en yaiza -->
+    <!-- no usar la funcion modal sino probar usando push -->
 </ion-content>

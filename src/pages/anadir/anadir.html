@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AnadirPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>anadir</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+   <!-- Hacer un for que muestre un item de los juegos con la opcion de "Elegir juego" -->
+   <div ion-item *ngFor="let item of juegos" (click)="juegoElegido(item)">
+      {{ item.nombre }} <!--saca el nombre de los juegos de la lisa-->
+    <button (click)="eliminarJuego(item)"><ion-icon name="trash"></ion-icon></button>
+    <!--sirve para hacer clik en el icono de basura y que lleve a la funcion de eliminar-->
+  </div>
+</ion-list>
+    <form>
+				<ion-list>
+				  <ion-item>
+				    <ion-label color="danger">Nombre Juego</ion-label> <!--cambio de estilo al color de los labels de los inputs-->
+				    <ion-input [(ngModel)]="nombre" name="nombre" placeholder="Nombre"></ion-input>
+				  </ion-item>
+
+				   <ion-item>
+				    <ion-label color="danger" stacked>Jugadores</ion-label>
+				    <ion-textarea [(ngModel)]="jugadores" name="jugadores" placeholder="Escribir numero de jugadores"></ion-textarea>
+				  </ion-item>
+
+					<ion-item>
+					  <ion-label color="danger" stacked>Descripcion</ion-label>
+					  <ion-textarea [(ngModel)]="descripcion" name="descripcion" placeholder="Escribr Description"></ion-textarea>
+				 	</ion-item>
+ 				</ion-list>
+				<button color="danger" ion-button (click) = "crearJuego()"  (click) = "presentAlert()">Añadir</button>
+			</form>
+
+
+</ion-content>
