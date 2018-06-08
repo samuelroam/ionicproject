@@ -26,20 +26,20 @@ export class AnadirPage {
 
 		{
           nombre: "League of Legends",
-          foto: "../../assets/imgs/moussedechocolate.jpg",
+          foto: "../../assets/imgs/lol.png",
           jugadores: "Partidas normales de dos equipos de 5 miembros cada uno",
           descripcion: "es un juego tipo MOBA"
 
       } ,
       {
       	nombre: "Dota2",
-      	foto: "../../assets/imgs/garbanzos.jpg",
+      	foto: "../../assets/imgs/dota2.png",
       	jugadores: "Partidas normales de dos equipos de 5 miembros cada uno",
       	descripcion: "es el padre de los MOBA"
       },
       {
       	nombre:"Paladins",
-      	foto:"../../assets/imgs/fingers.jpg",
+      	foto:"../../assets/imgs/paladins.jpg",
       	jugadores:"Dos equipos de 5 miembros cada uno",
       	descripcion: "Juego tipo shooter de fantasia con habilidades unicas"
       }

@@ -15,12 +15,22 @@
 
 <ion-content padding>
     <ion-list>
+
    <!-- Hacer un for que muestre un item de los juegos con la opcion de "Elegir juego" -->
-   <div ion-item *ngFor="let item of juegos" (click)="juegoElegido(item)">
-      {{ item.nombre }} <!--saca el nombre de los juegos de la lisa-->
-    <button (click)="eliminarJuego(item)"><ion-icon name="trash"></ion-icon></button>
-    <!--sirve para hacer clik en el icono de basura y que lleve a la funcion de eliminar-->
+        <!-- al deslizar a la derecha aparece la opcion de eliminar -->
+   <div ion-item *ngFor="let item of juegos">
+       <ion-item-sliding>
+           <ion-item>
+               <div (click)="juegoElegido(item)">{{ item.nombre }} </div>
+               <!--saca el nombre de los juegos de la lisa-->
+               </ion-item>
+           <ion-item-options side="right">
+                <button (click)="eliminarJuego(item)"><ion-icon name="trash"></ion-icon></button>
+            </ion-item-options>
+        </ion-item-sliding>
   </div>
+
+
 </ion-list>
     <form>
 				<ion-list>
